@@ -1,0 +1,1 @@
+This project is a simple analysis of a company's sales data to discover some actionable insights for their internal team. The main goal of this project was to explore collabroative work on Github as well as connect to a dhasboard and share insights using a visualisation platform such as PowerBI or Tableau.
