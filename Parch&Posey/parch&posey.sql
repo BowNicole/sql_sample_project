@@ -1,11 +1,18 @@
-SELECT a.name AS account, 
-    o.standard_amt_usd AS std,
-    o.gloss_amt_usd AS gloss,
-    o.poster_amt_usd AS poster,
-    o.total_amt_usd AS total
-FROM accounts AS a
-WHERE std > 0, gloss> 0, poster > 0,
-INNER JOIN orders AS o
-ON a.id = o.account_id
-GROUP BY account
-ORDER BY total DESC;
+// to create a db and convert to different file
+sqlite> .open parch&posey.db
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .output sales_reps.csv
+sqlite> SELECT id,
+   ...> name,
+   ...> region_id
+   ...> FROM sales_reps;
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .output web_events.csv
+sqlite> SELECT id,
+   ...> account_id,
+   ...> occurred_at,
+   ...> channel
+   ...> FROM web_events
+ 
